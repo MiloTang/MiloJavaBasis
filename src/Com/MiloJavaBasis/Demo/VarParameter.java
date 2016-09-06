@@ -1,7 +1,11 @@
 package Com.MiloJavaBasis.Demo;
 
 import org.junit.Test;
-
+/**
+ * 
+ * @author milo
+ * @version 可变参数
+ */
 public class VarParameter {
 
 	@Test
