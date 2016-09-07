@@ -43,7 +43,7 @@ enum Grade {
 }
 
 /*
- * 单太设计模式
+ * 单例设计模式
  */
 enum single {
 	single;
@@ -57,5 +57,7 @@ public class EnumDemo {
 				+ Grade.A.localValue());
 		System.out.println(Grade.C.name());
 		System.out.println(Grade.C.ordinal());
+		System.out.println(Grade.valueOf("B").localValue());
+		System.out.println(Grade.values()[4].localValue());
 	}
 }
