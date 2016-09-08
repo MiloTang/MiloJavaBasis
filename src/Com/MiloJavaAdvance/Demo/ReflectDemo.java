@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import org.junit.Test;
 
@@ -20,7 +21,7 @@ public class ReflectDemo {
 	// 加载类的字节码
 	@Test
 	public void ClassLoad() throws ClassNotFoundException {
-		Class<?> csa = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> csa = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Class<?> csb = new Person().getClass();
 		Class<Person> csc = Person.class;
 		GetClassInfo(csa);
@@ -31,7 +32,7 @@ public class ReflectDemo {
 
 	@Test
 	public void UseReflect() throws Exception {
-		Class<?> cs = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Constructor<?> constructor = cs.getConstructor();
 		Person p = (Person) constructor.newInstance();
 		System.out.println(p.name);
@@ -79,7 +80,7 @@ public class ReflectDemo {
 	@Test
 	public void ReflectMethod1() throws Exception {
 		Person p = new Person();
-		Class<?> cs = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Method m = cs.getMethod("test", null);
 		m.invoke(p, null);
 	}
@@ -87,7 +88,7 @@ public class ReflectDemo {
 	@Test
 	public void ReflectMethod2() throws Exception {
 		Person p = new Person();
-		Class<?> cs = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Method m = cs.getMethod("test", String.class);
 		m.invoke(p, "testparam");
 	}
@@ -95,7 +96,7 @@ public class ReflectDemo {
 	@Test
 	public void ReflectMethod3() throws Exception {
 		Person p = new Person();
-		Class<?> cs = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Method m = cs.getMethod("test", String.class, int.class);
 		m.invoke(p, "testparam", 100);
 	}
@@ -103,7 +104,7 @@ public class ReflectDemo {
 	@Test
 	public void ReflectMethod4() throws Exception {
 		Person p = new Person();
-		Class<?> cs = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Method m = cs.getDeclaredMethod("test", int.class);
 		m.setAccessible(true);
 		m.invoke(p, 100);
@@ -112,7 +113,7 @@ public class ReflectDemo {
 	@Test
 	public void ReflectMethod5() throws Exception {
 		Person p = new Person();
-		Class<?> cs = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Method m = cs.getDeclaredMethod("test", int[].class);
 		m.setAccessible(true);
 		m.invoke(null, new int[] { 100, 20, 20 });
@@ -122,7 +123,7 @@ public class ReflectDemo {
 	@Test
 	public void ReflectMethod6() throws Exception {
 		Person p = new Person();
-		Class<?> cs = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Method m = cs.getDeclaredMethod("main", String[].class);
 		m.invoke(null, (Object) new String[] { "100", "20", "20" });
 		m.invoke(p, new Object[] { new String[] { "100", "30", "30" } });
@@ -131,7 +132,7 @@ public class ReflectDemo {
 	@Test
 	public void ReflectFiled1() throws Exception {
 		Person p = new Person();
-		Class<?> cs = Class.forName("Com.MiloJavaBasis.Demo.Person");
+		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
 		Field f = cs.getField("name");
 		f.set(p, "abbbbbbb");
 		System.out.println(f.get(p) + " lei xing wei : " + f.getType());
