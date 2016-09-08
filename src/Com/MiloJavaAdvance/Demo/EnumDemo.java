@@ -1,4 +1,4 @@
-package Com.MiloJavaBasis.Demo;
+package Com.MiloJavaAdvance.Demo;
 
 import org.junit.Test;
 
