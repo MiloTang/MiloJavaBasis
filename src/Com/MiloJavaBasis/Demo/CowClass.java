@@ -32,6 +32,12 @@ public class CowClass extends AnimalClass implements BiologyClass {
 		super.Eat();
 		System.out.println("CowClass Eat()");
 	}
+	
+	@Override
+	public void Move() {
+		// TODO Auto-generated method stub
+		System.out.println("Override Animal Move()");
+	}
 	/*
 	 * 重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。
 	 * 
