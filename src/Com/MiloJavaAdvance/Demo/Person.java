@@ -5,7 +5,7 @@ import java.util.List;
 public class Person {
 
 	public String name = "demo1";
-	public static String love="abc";
+	public static String love = "abc";
 	private int age;
 	private double height;
 	private String ID;
@@ -56,6 +56,11 @@ public class Person {
 
 	}
 
+	public Person(Person person) {
+		test(22);
+
+	}
+
 	public Person(int num, String str) {
 		System.out.println(str + num);
 	}
@@ -69,28 +74,35 @@ public class Person {
 	private void love() {
 		System.out.println("喜欢隔壁阿三");
 	}
+
 	public void test() {
 		System.out.println("test");
 	}
+
 	public void test(String str) {
 		System.out.println(str);
 	}
+
 	private void test(int num) {
 		System.out.println(num);
 	}
-	public void test(String str,int num) {
-		System.out.println(str+":"+num);
+
+	public void test(String str, int num) {
+		System.out.println(str + ":" + num);
 	}
+
 	public static void test(int[] num) {
 		for (int i : num) {
-			System.out.print(i+"  ");
+			System.out.print(i + "  ");
 		}
-		
+
 	}
+
 	public List<String> test(String str, List<String> list) {
 		list.add(str);
 		return list;
 	}
+
 	public static void main(String[] args) {
 		for (String string : args) {
 			System.out.println(string);

@@ -119,6 +119,7 @@ public class BeanUtilesDemo {
 		 */
 		ConvertUtils.register(new Converter() {
 
+			@SuppressWarnings("unchecked")
 			@Override
 			public <T> T convert(Class<T> type, Object value) {
 				// TODO Auto-generated method stub
