@@ -1,11 +1,14 @@
 package Com.MiloJavaAdvance.Demo;
 
+import java.util.Date;
+
 //JavaBean
 public class Animal {
 
 	private String Animaltype;
 	private int age;
 	private String region;
+	private Date birthday;
 
 	public String getString() {
 
@@ -34,6 +37,14 @@ public class Animal {
 
 	public void setRegion(String region) {
 		this.region = region;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 
 }

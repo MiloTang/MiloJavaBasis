@@ -5,7 +5,6 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 import org.junit.Test;
 
@@ -81,8 +80,8 @@ public class ReflectDemo {
 	public void ReflectMethod1() throws Exception {
 		Person p = new Person();
 		Class<?> cs = Class.forName("Com.MiloJavaAdvance.Demo.Person");
-		Method m = cs.getMethod("test", null);
-		m.invoke(p, null);
+		Method m = cs.getMethod("test");
+		m.invoke(p);
 	}
 
 	@Test
