@@ -110,4 +110,13 @@ public class StringDemo {
 		String str1 = "解决方式直接将tomcat的server文件修改为";
 		System.out.println(new StringBuffer(str1).reverse().toString());
 	}
+	
+	@Test
+	public void SplitString() {
+		// TODO Auto-generated method stub
+		String str1 = "解决方式直接将tomcat的server文件修改为";
+		for (String str : str1.split("e")) {
+			System.out.println(str);
+		};
+	}
 }
