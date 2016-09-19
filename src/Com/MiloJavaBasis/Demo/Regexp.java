@@ -221,6 +221,7 @@ public class Regexp {
 	 * 返回指定字符串的字面替换字符串。这个方法返回一个字符串，就像传递给Matcher类的appendReplacement
 	 * 方法一个字面字符串一样工作。
 	 */
+	@SuppressWarnings("resource")
 	@Test
 	public void RegexpStr() {
 		String str1 = null;
@@ -258,6 +259,7 @@ public class Regexp {
 		return;
 	}
 	
+	@SuppressWarnings("resource")
 	private void Select(){
 		System.out.println("需要继续测试么输入Y/N");
 		Scanner scan3 = new Scanner(System.in);
